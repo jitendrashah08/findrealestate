@@ -172,3 +172,98 @@
     align-items: flex-start;
   }
 }
+
+/* Founder Contact Box */
+.founderCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--border-radius);
+  padding: 2.4rem;
+  margin-top: 1.6rem;
+  max-width: 38rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.founderCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.founderHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.founderLogoWrapper {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background: #151717;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jsLogoImg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.founderMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.founderName {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: -0.01em;
+}
+
+.founderTitle {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.founderContact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  color: #b3b3b3;
+  transition: color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.contactItem:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.contactIcon {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}

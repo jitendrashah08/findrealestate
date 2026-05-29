@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
@@ -49,7 +50,7 @@ export default function Header() {
         <div className={styles.content}>
           {/* Logo SVG matching the original */}
           <div className={styles.logo}>
-            <Link href="/" aria-label="FIND Real Estate Home">
+            <Link href="/" aria-label="FIND Real Estate Home" className={styles.logoLink}>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 975 280">
                 <path
                   fill="currentColor"
@@ -72,6 +73,16 @@ export default function Header() {
                   data-letter="d"
                 />
               </svg>
+              {/* Circular personal JS badge */}
+              <div className={styles.jsBadge}>
+                <Image
+                  src="/images/js-logo.png"
+                  alt="JS Logo"
+                  width={28}
+                  height={28}
+                  className={styles.jsLogoHeaderImg}
+                />
+              </div>
             </Link>
           </div>
 
