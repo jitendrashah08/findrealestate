@@ -1,0 +1,188 @@
+.main {
+  background-color: #151717;
+  color: #ffffff;
+  padding-top: 14rem;
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 6.4rem 0 3.2rem 0;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 6.4rem;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: 5.6rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.subtitle {
+  font-family: var(--font-primary);
+  font-size: 2.2rem;
+  line-height: 1.6;
+  color: #b3b3b3;
+}
+
+/* FILTERS */
+.filtersSection {
+  margin-bottom: 6.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 3.2rem;
+}
+
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.filterBtn {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #b3b3b3;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.2rem 2.4rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filterBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.activeFilter {
+  background: #ffffff;
+  color: #151717 !important;
+  border-color: #ffffff;
+}
+
+/* GRIDS */
+.certifiedSection, .moreSection {
+  padding-bottom: 8rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-primary);
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 4.8rem;
+  letter-spacing: -1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.card {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certifiedCard {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.imgWrapper {
+  position: relative;
+  height: 36rem;
+  width: 100%;
+}
+
+.portrait {
+  object-fit: cover;
+  object-position: top center;
+}
+
+.badge {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: var(--color-accent);
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.6rem 1.6rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 122, 255, 0.3);
+  z-index: 5;
+}
+
+.cardBody {
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.agentName {
+  font-family: var(--font-primary);
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.agentRole {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.agentSpecialty {
+  font-family: var(--font-secondary);
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #888888;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.agentBio {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #b3b3b3;
+}
+
+@media (max-width: 992px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

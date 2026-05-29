@@ -1,0 +1,313 @@
+.main {
+  background-color: #151717;
+  color: #ffffff;
+  padding-top: 14rem;
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 6.4rem 0 3.2rem 0;
+}
+
+.heroContent {
+  max-width: 72rem;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: 6.4rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 2.4rem;
+}
+
+.subtitle {
+  font-family: var(--font-primary);
+  font-size: 2.2rem;
+  line-height: 1.6;
+  color: #b3b3b3;
+}
+
+/* MEMBERSHIPS */
+.plansSection {
+  padding: 8rem 0;
+}
+
+.sectionTitle {
+  font-family: var(--font-primary);
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 4.8rem;
+  letter-spacing: -1px;
+}
+
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.planCard {
+  border-radius: var(--border-radius);
+  padding: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.featuredPlan {
+  background: #ffffff;
+  color: #151717;
+  border-color: #ffffff;
+}
+
+.planTag {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-accent);
+  align-self: flex-start;
+  padding: 0.6rem 1.6rem;
+  border-radius: 2rem;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.featuredPlan .planTag {
+  background: rgba(21, 23, 23, 0.05);
+}
+
+.planCard h3 {
+  font-family: var(--font-primary);
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+.price {
+  font-family: var(--font-primary);
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+}
+
+.pricePeriod {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #b3b3b3;
+}
+
+.featuredPlan .pricePeriod {
+  color: #666666;
+}
+
+.featuresList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2.4rem;
+}
+
+.featuredPlan .featuresList {
+  border-top-color: rgba(21, 23, 23, 0.08);
+}
+
+.featuresList li {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  position: relative;
+  padding-left: 2.4rem;
+}
+
+.featuresList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* STORIES */
+.storiesSection {
+  padding: 8rem 0;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.storiesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.storyCard {
+  border-radius: var(--border-radius);
+  padding: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.quote {
+  font-family: var(--font-secondary);
+  font-size: 2.2rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #e3e3e3;
+  margin-bottom: 4rem;
+}
+
+.author h4 {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.author p {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  color: var(--color-accent);
+}
+
+/* DATA PLEDGE */
+.pledgeSection {
+  padding: 10rem 0;
+}
+
+.pledgeBox {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius);
+  padding: 6.4rem;
+  text-align: center;
+  max-width: 96rem;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.pledgeTitle {
+  font-family: var(--font-primary);
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+  letter-spacing: -1px;
+}
+
+.pledgeText {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #b3b3b3;
+}
+
+/* FORM APPLICATION */
+.joinFormSection {
+  padding: 10rem 0 14rem 0;
+}
+
+.formLayout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 8rem;
+  align-items: flex-start;
+}
+
+.formDesc {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #b3b3b3;
+}
+
+.formBox {
+  border-radius: var(--border-radius);
+  padding: 4.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.inputGroup label {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b3b3b3;
+}
+
+.inputGroup input, .inputGroup textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.2rem;
+  padding: 1.6rem 2rem;
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  outline: none;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.inputGroup input:focus, .inputGroup textarea:focus {
+  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.successMessage {
+  text-align: center;
+  padding: 6.4rem 0;
+}
+
+.successMessage h3 {
+  font-family: var(--font-primary);
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+.successMessage p {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  color: #b3b3b3;
+}
+
+@media (max-width: 992px) {
+  .plansGrid, .storiesGrid, .formLayout {
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 4.8rem;
+  }
+  .pledgeBox {
+    padding: 4rem 2.4rem;
+  }
+  .formBox {
+    padding: 3.2rem;
+  }
+}

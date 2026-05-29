@@ -1,0 +1,175 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text: #151717;
+  --color-primary: #151717;
+  --color-accent: #007aff;
+  --side-gap: 10rem;
+  --full-width: 100vw;
+  --font-primary: var(--font-instrument-sans), sans-serif;
+  --font-secondary: var(--font-lora), serif;
+  --border-radius: 2.4rem;
+}
+
+[data-theme="dark"] {
+  --color-bg: #151717;
+  --color-text: #ffffff;
+  --color-primary: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px; /* 1rem = 10px */
+  height: 100%;
+  scroll-behavior: auto;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 9px;
+  }
+  :root {
+    --side-gap: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+  :root {
+    --side-gap: 2.5rem;
+  }
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b3b3b3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Elegant helper utilities */
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 var(--side-gap);
+}
+
+.em {
+  font-family: var(--font-secondary);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Magnetic / Premium circular button styles inspired by Cuberto */
+.btn-round {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem 3.2rem;
+  border-radius: 3rem;
+  border: 1px solid var(--color-text);
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-round:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.btn-round-primary {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-color: var(--color-primary);
+}
+
+.btn-round-primary:hover {
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.btn-round span[data-text] {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 1.6em;
+  line-height: 1.6em;
+  transition: transform 0.35s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.btn-round span[data-text]::after {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transition: inherit;
+}
+
+.btn-round:hover span[data-text] {
+  transform: translateY(-100%);
+}
+
+/* Glassmorphism drop overlays */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(21, 23, 23, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
