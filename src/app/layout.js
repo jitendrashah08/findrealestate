@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LenisScroll from "./components/LenisScroll";
+import { Analytics } from "@vercel/analytics/next";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </LenisScroll>
+        <Analytics />
       </body>
     </html>
   );
