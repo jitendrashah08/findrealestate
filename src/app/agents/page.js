@@ -7,62 +7,62 @@ import styles from "./page.module.css";
 const MOCK_AGENTS = [
   {
     id: 1,
-    name: "Alexander Mercer",
-    role: "Senior Broker & Advisor",
-    specialty: "Manhattan Specialist",
-    borough: "Manhattan",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
-    bio: "With over 15 years of luxury residential transactions in Manhattan, Alexander knows every high-rise board and hidden co-op criteria in the city.",
+    name: "Tariq Al-Mansoori",
+    role: "Managing Director",
+    specialty: "Palm Jumeirah & Waterfront Luxury",
+    borough: "Dubai Local",
+    image: "/images/agents/agent_tariq.png",
+    bio: "Tariq has guided high-net-worth international buyers for over a decade in Dubai, specializing in off-market penthouses on the Palm Jumeirah and grand mansions in Emirates Hills.",
     certified: true,
   },
   {
     id: 2,
-    name: "Sarah Jenkins",
-    role: "Managing Director",
-    specialty: "Brooklyn Townhomes",
-    borough: "Brooklyn",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop",
-    bio: "Sarah is Brooklyn's go-to advisor for brownstones and historical preservation properties. She combines financial planning background with local mastery.",
+    name: "Rahul Sharma",
+    role: "Senior Investment Broker",
+    specialty: "NRI Investment Advisory & Downtown Dubai",
+    borough: "Indian Certified",
+    image: "/images/agents/agent_rahul.png",
+    bio: "Rahul specializes in helping NRI investors build high-yield property portfolios in Downtown Dubai, Dubai Hills, and Business Bay, combining deep Indian market insights with local mastery.",
     certified: true,
   },
   {
     id: 3,
-    name: "Michael Chang",
-    role: "Commercial Real Estate Broker",
-    specialty: "Queens Properties",
-    borough: "Queens",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop",
-    bio: "Michael advises corporate developers, retailers, and co-working spaces looking to scale their commercial footprints across Queens and Brooklyn.",
+    name: "Priya Nair",
+    role: "Residential Sales Director",
+    specialty: "Dubai Hills Estate Townhouses",
+    borough: "Indian Certified",
+    image: "/images/agents/agent_priya.png",
+    bio: "Priya is the go-to advisor for Indian families relocating to Dubai's premium villa communities, offering smooth assistance with mortgages, resident visas, and school choices.",
     certified: true,
   },
   {
     id: 4,
     name: "Elena Rostova",
-    role: "Leasing & Rentals Director",
-    specialty: "Luxury High-Rises",
-    borough: "Manhattan",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop",
-    bio: "Elena specializes in off-market rentals, representing high-net-worth individuals and corporate relocations into Manhattan's most desirable towers.",
-    certified: false,
+    role: "Leasing & Commercial Advisor",
+    specialty: "Business Bay High-Rises",
+    borough: "Dubai Local",
+    image: "/images/agents/agent_elena.png",
+    bio: "Elena manages corporate relocations and full-floor high-rise office leases in Business Bay, representing top multinational entities and tech startups.",
+    certified: true,
   },
   {
     id: 5,
-    name: "Marcus Vance",
-    role: "Residential Specialist",
-    specialty: "Staten Island Waterfront",
-    borough: "Staten Island",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
-    bio: "Marcus has secured dozens of waterfront and multi-family homes in Staten Island, focusing on families looking for spacious properties.",
+    name: "Amit Patel",
+    role: "Investment Advisor",
+    specialty: "Downtown Studios & Apartments",
+    borough: "Indian Certified",
+    image: "/images/agents/agent_rahul.png",
+    bio: "Amit assists first-time buyers looking to secure high-growth rental properties and vacation flats in Downtown Dubai and Dubai Marina.",
     certified: false,
   },
   {
     id: 6,
-    name: "Tariq Mahmood",
-    role: "Advisor",
-    specialty: "Bronx Multi-Family",
-    borough: "Bronx",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop",
-    bio: "Tariq represents buyers and sellers of multi-family complexes, co-ops, and investment portfolios throughout the Bronx.",
+    name: "Fatima Al-Hashimi",
+    role: "Residential Consultant",
+    specialty: "Dubai Marina Waterfront Penthouses",
+    borough: "Dubai Local",
+    image: "/images/agents/agent_elena.png",
+    bio: "Fatima focuses on high-floor luxury apartments in Dubai Marina, providing buyers with detailed yield analysis and property valuation guidance.",
     certified: false,
   }
 ];
@@ -111,34 +111,16 @@ export default function AgentsPage() {
               All Regions
             </button>
             <button
-              className={`${styles.filterBtn} ${boroughFilter === "Manhattan" ? styles.activeFilter : ""}`}
-              onClick={() => setBoroughFilter("Manhattan")}
+              className={`${styles.filterBtn} ${boroughFilter === "Dubai Local" ? styles.activeFilter : ""}`}
+              onClick={() => setBoroughFilter("Dubai Local")}
             >
-              Manhattan
+              Dubai Local
             </button>
             <button
-              className={`${styles.filterBtn} ${boroughFilter === "Brooklyn" ? styles.activeFilter : ""}`}
-              onClick={() => setBoroughFilter("Brooklyn")}
+              className={`${styles.filterBtn} ${boroughFilter === "Indian Certified" ? styles.activeFilter : ""}`}
+              onClick={() => setBoroughFilter("Indian Certified")}
             >
-              Brooklyn
-            </button>
-            <button
-              className={`${styles.filterBtn} ${boroughFilter === "Queens" ? styles.activeFilter : ""}`}
-              onClick={() => setBoroughFilter("Queens")}
-            >
-              Queens
-            </button>
-            <button
-              className={`${styles.filterBtn} ${boroughFilter === "Bronx" ? styles.activeFilter : ""}`}
-              onClick={() => setBoroughFilter("Bronx")}
-            >
-              Bronx
-            </button>
-            <button
-              className={`${styles.filterBtn} ${boroughFilter === "Staten Island" ? styles.activeFilter : ""}`}
-              onClick={() => setBoroughFilter("Staten Island")}
-            >
-              Staten Island
+              Indian Certified
             </button>
           </div>
         </div>
