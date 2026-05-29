@@ -79,11 +79,11 @@ export default function JoinPage() {
           <div className={styles.storiesGrid}>
             <div className={`${styles.storyCard} glass`}>
               <p className={styles.quote}>
-                "Joining FIND doubled my sales volume in less than 12 months. The in-house legal and mortgage desks speed up transactions so I can focus entirely on listing client brownstones."
+                "Joining FIND doubled my sales volume in less than 12 months. The in-house legal and mortgage desks speed up transactions so I can focus entirely on listing client luxury villas."
               </p>
               <div className={styles.author}>
                 <h4>Sarah Jenkins</h4>
-                <p>Managing Director, Brooklyn Specialist</p>
+                <p>Managing Director, Dubai Marina Specialist</p>
               </div>
             </div>
             <div className={`${styles.storyCard} glass`}>
@@ -92,7 +92,7 @@ export default function JoinPage() {
               </p>
               <div className={styles.author}>
                 <h4>Alexander Mercer</h4>
-                <p>Senior Broker, Manhattan Specialist</p>
+                <p>Senior Broker, Downtown Dubai Specialist</p>
               </div>
             </div>
           </div>

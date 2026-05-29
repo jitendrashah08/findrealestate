@@ -555,7 +555,7 @@ export default function Home() {
               <div className={styles.servicesItemNum}></div>
               <div className={styles.servicesItemText}>
                 <h3>
-                  Access hidden rentals before they hit the market through agents who know every landlord in town. With decades of NYC experience, we unlock the best deals you won’t find online.
+                  Access premium rentals before they hit the market through agents who know every landlord in town. With decades of Dubai experience, we unlock the best deals you won’t find online.
                 </h3>
               </div>
               <div className={styles.servicesItemMore}>
@@ -618,15 +618,15 @@ export default function Home() {
           <div className={styles.blogGrid}>
             <div className={styles.blogCard}>
               <div className={styles.blogTag}>Market Update</div>
-              <h3>NYC Summer Real Estate Trend Forecast</h3>
-              <p>Analyzing key shifts in home values, mortgage rates, and co-op approvals heading into this summer season.</p>
-              <Link href="/blog/forecast">Read Article</Link>
+              <h3>Dubai Real Estate Trend Forecast</h3>
+              <p>Analyzing key shifts in home values, mortgage rates, and off-plan launch surges heading into this season.</p>
+              <Link href="/resources?tab=market-report">Read Article</Link>
             </div>
             <div className={styles.blogCard}>
               <div className={styles.blogTag}>Buyer Guide</div>
-              <h3>Co-op vs Condo: The Definitive Guide</h3>
-              <p>Everything you need to know about purchasing boards, financial requirements, and ownership rights in New York City.</p>
-              <Link href="/blog/coop-condo">Read Article</Link>
+              <h3>Off-Plan vs Ready: The Definitive Guide</h3>
+              <p>Everything you need to know about purchasing off-plan projects, escrow protections, and expat freehold zones in Dubai.</p>
+              <Link href="/resources?tab=guides">Read Article</Link>
             </div>
           </div>
         </div>
