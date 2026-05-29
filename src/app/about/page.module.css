@@ -1,0 +1,651 @@
+.main {
+  min-height: 100vh;
+  padding-top: 16rem;
+  padding-bottom: 10rem;
+  position: relative;
+  background-color: #ededed;
+  overflow: hidden;
+}
+
+.skyBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bgImage {
+  object-fit: cover;
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 4.8rem;
+  }
+}
+
+.subtitle {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #4a4d4d;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tabs Container navigation */
+.tabsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.tabBtn {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3rem;
+  padding: 1.2rem 2.8rem;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #4a4d4d;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.tabBtn:hover {
+  background: rgba(255, 255, 255, 0.85);
+  color: #151717;
+  transform: translateY(-2px);
+}
+
+.activeTab {
+  background: #151717 !important;
+  border-color: #151717 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 25px rgba(21, 23, 23, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+/* Content Panel Layout */
+.contentCard {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--border-radius);
+  padding: 4rem 2.4rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .contentCard {
+    padding: 6rem 4.8rem;
+  }
+}
+
+.panelDesc {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+/* Story Panel Styling */
+.storyPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+}
+
+.storyIntro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4.8rem;
+}
+
+@media (min-width: 992px) {
+  .storyIntro {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 6.4rem;
+    align-items: flex-start;
+  }
+}
+
+.introText h2 {
+  font-family: var(--font-primary);
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #151717;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.2rem;
+}
+
+.storyParagraph {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #4a4d4d;
+  margin-top: 1.6rem;
+}
+
+/* Founder Profile Card */
+.founderCard {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2.4rem;
+  padding: 3.6rem 3rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.founderLogoContainer {
+  width: 8.4rem;
+  height: 8.4rem;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(21, 23, 23, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.founderCard:hover .founderLogoContainer {
+  transform: scale(1.08) rotate(5deg);
+}
+
+.founderCard h3 {
+  font-family: var(--font-primary);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 0.4rem;
+}
+
+.founderTitle {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+.founderBio {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #4a4d4d;
+  font-style: italic;
+  margin-bottom: 2.4rem;
+}
+
+.founderContact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  color: #4a4d4d;
+  border-top: 1px solid rgba(21, 23, 23, 0.05);
+  width: 100%;
+  padding-top: 1.6rem;
+}
+
+.founderContact strong {
+  color: #151717;
+}
+
+/* Timeline */
+.timelineSection h3,
+.pressPanel h2,
+.careersPanel h2,
+.careersPanel h3 {
+  font-family: var(--font-primary);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #151717;
+  letter-spacing: -0.01em;
+  margin-bottom: 3.2rem;
+}
+
+.timelineGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+}
+
+@media (min-width: 768px) {
+  .timelineGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.timelineItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.timelineYear {
+  font-family: var(--font-primary);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  border-bottom: 2px solid rgba(21, 23, 23, 0.05);
+  padding-bottom: 0.8rem;
+}
+
+.timelineCard {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.6rem;
+  padding: 2.4rem 2rem;
+  flex-grow: 1;
+}
+
+.timelineCard h4 {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 0.8rem;
+}
+
+.timelineCard p {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Press Panel */
+.pressGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.2rem;
+  margin-bottom: 5.6rem;
+}
+
+@media (min-width: 992px) {
+  .pressGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pressCard {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2.4rem;
+  padding: 3.6rem 2.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.pressCard:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(21, 23, 23, 0.08);
+}
+
+.pressMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid rgba(21, 23, 23, 0.05);
+  padding-bottom: 1.2rem;
+}
+
+.pressSource {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #151717;
+}
+
+.pressDate {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.pressCard h3 {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #151717;
+  line-height: 1.4;
+  margin-bottom: 1.6rem;
+}
+
+.pressSnippet {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #555;
+  font-style: italic;
+}
+
+.mediaInquiries {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2.4rem;
+  padding: 4rem 3rem;
+  text-align: center;
+  max-width: 68rem;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mediaInquiries h3 {
+  font-family: var(--font-primary);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 1.2rem;
+}
+
+.mediaInquiries p {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+/* Careers & Commission */
+.careersIntro {
+  margin-bottom: 5.6rem;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+  margin-top: 3.6rem;
+}
+
+@media (min-width: 768px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.benefitCard {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2rem;
+  padding: 3rem 2.4rem;
+}
+
+.benefitCard h4 {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 1.2rem;
+}
+
+.benefitCard p {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.jobsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.jobCard {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2.4rem;
+  padding: 3.6rem 3rem;
+  transition: all 0.3s ease;
+}
+
+.jobCard:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(21, 23, 23, 0.08);
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  border-bottom: 1px solid rgba(21, 23, 23, 0.05);
+  padding-bottom: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.jobHeader h4 {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 0.4rem;
+}
+
+.jobLocation {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.jobCommission {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0b9b56;
+  background: rgba(11, 155, 86, 0.06);
+  padding: 0.6rem 1.6rem;
+  border-radius: 2rem;
+}
+
+.jobDesc {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.jobRequirements {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  color: #4a4d4d;
+  margin-bottom: 2.8rem;
+}
+
+.jobRequirements ul {
+  padding-left: 2rem;
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Modal Overlay & Quick Apply Form */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.4rem;
+}
+
+.modalCard {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: 52rem;
+  padding: 4rem 3rem;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.closeModal {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  font-size: 2.8rem;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.closeModal:hover {
+  color: #151717;
+}
+
+.modalForm h3 {
+  font-family: var(--font-primary);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 0.4rem;
+}
+
+.modalJobTitle {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  display: block;
+}
+
+.modalJobSub {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 2.8rem;
+  display: block;
+}
+
+.formGroup {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.formGroup label {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #151717;
+}
+
+.formGroup input,
+.formGroup textarea {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(21, 23, 23, 0.1);
+  border-radius: 1.2rem;
+  padding: 1.2rem 1.6rem;
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  color: #151717;
+  outline: none;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #151717;
+}
+
+/* Modal Success State */
+.modalSuccess {
+  text-align: center;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.successIcon {
+  width: 6.4rem;
+  height: 6.4rem;
+  background: #0b9b56;
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(11, 155, 86, 0.2);
+}
+
+.modalSuccess h3 {
+  font-family: var(--font-primary);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #151717;
+}
+
+.modalSuccess p {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #666;
+}
