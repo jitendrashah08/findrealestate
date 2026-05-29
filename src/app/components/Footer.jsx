@@ -53,15 +53,15 @@ export default function Footer() {
             <h3>Company</h3>
             <Link href="/agents">Our Agents</Link>
             <Link href="/join">Join as Agent</Link>
-            <Link href="/about/story">Our Story</Link>
-            <Link href="/about/careers">Careers</Link>
+            <Link href="/about?tab=story">Our Story</Link>
+            <Link href="/about?tab=careers">Careers</Link>
           </div>
 
           <div className={styles.linksColumn}>
             <h3>Resources</h3>
-            <Link href="/blog">Blog & Guides</Link>
-            <Link href="/calculators">Mortgage Calculator</Link>
-            <Link href="/faq">Help Center & FAQ</Link>
+            <Link href="/resources?tab=guides">Blog & Guides</Link>
+            <Link href="/resources?tab=calculator">Mortgage Calculator</Link>
+            <Link href="/resources?tab=faq">Help Center & FAQ</Link>
             <Link href="/about/contact">Contact Us</Link>
           </div>
         </div>
