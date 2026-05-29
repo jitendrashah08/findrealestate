@@ -124,10 +124,12 @@ export default function Header() {
               </button>
               {activeDropdown === "paperwork" && (
                 <div className={`${styles.dropdownSheet} glass`}>
-                  <Link href="/paperwork/mortgages">Mortgage Applications</Link>
-                  <Link href="/paperwork/lease">Lease Agreement Templates</Link>
-                  <Link href="/paperwork/disclosure">Seller Disclosures</Link>
-                  <Link href="/paperwork/buyer-agreement">Buyer Representation Agreements</Link>
+                  <Link href="/paperwork?tab=contract-f">Unified Contract F (MOU)</Link>
+                  <Link href="/paperwork?tab=contract-a">Unified Contract A (Seller Agreement)</Link>
+                  <Link href="/paperwork?tab=contract-b">Unified Contract B (Buyer Agreement)</Link>
+                  <Link href="/paperwork?tab=ejari">Ejari Tenancy Registration</Link>
+                  <Link href="/paperwork?tab=noc">Developer NOC Request</Link>
+                  <Link href="/paperwork?tab=title-deed">DLD Title Deed Transfer</Link>
                 </div>
               )}
             </div>
@@ -219,9 +221,10 @@ export default function Header() {
             
             <div className={styles.burgerSectionTitle}>Paperwork</div>
             <div className={styles.burgerSublinks}>
-              <Link href="/paperwork/mortgages">Mortgage Applications</Link>
-              <Link href="/paperwork/lease">Lease Agreements</Link>
-              <Link href="/paperwork/disclosure">Seller Disclosures</Link>
+              <Link href="/paperwork?tab=contract-f">Unified Contract F (MOU)</Link>
+              <Link href="/paperwork?tab=ejari">Ejari Tenancy Registration</Link>
+              <Link href="/paperwork?tab=noc">Developer NOC Request</Link>
+              <Link href="/paperwork?tab=title-deed">DLD Title Deed Transfer</Link>
             </div>
 
             <div className={styles.burgerSectionTitle}>Resources</div>

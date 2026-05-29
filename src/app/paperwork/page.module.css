@@ -1,0 +1,337 @@
+.main {
+  min-height: 100vh;
+  padding-top: 16rem;
+  padding-bottom: 10rem;
+  position: relative;
+  background-color: #ededed;
+  overflow: hidden;
+}
+
+.skyBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bgImage {
+  object-fit: cover;
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 4.8rem;
+  }
+}
+
+.subtitle {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #4a4d4d;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.2rem;
+  margin-top: 6rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .layout {
+    grid-template-columns: 34rem auto;
+    gap: 4.8rem;
+  }
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.tabBtn {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.6rem;
+  padding: 2rem 2.4rem;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.tabBtn:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(21, 23, 23, 0.08);
+  transform: translateX(4px);
+}
+
+.activeTab {
+  background: #151717 !important;
+  border-color: #151717 !important;
+  color: #ffffff !important;
+  transform: translateX(6px) !important;
+  box-shadow: 0 10px 30px rgba(21, 23, 23, 0.15) !important;
+}
+
+.tabBtnContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.tabBtnContent h3 {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+.tabBtnContent p {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.activeTab .tabBtnContent p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.arrow {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.activeTab .arrow {
+  opacity: 1;
+  transform: rotate(45deg) scale(0.9);
+}
+
+/* Active Content Card */
+.contentCard {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--border-radius);
+  padding: 4rem 2.4rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contentCard {
+    padding: 6rem 4.8rem;
+  }
+}
+
+.cardHeader {
+  border-bottom: 1px solid rgba(21, 23, 23, 0.08);
+  padding-bottom: 2.4rem;
+  margin-bottom: 4rem;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.titleBlock h2 {
+  font-family: var(--font-primary);
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #151717;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .titleBlock h2 {
+    font-size: 3.8rem;
+  }
+}
+
+.subtitleBadge {
+  background: rgba(21, 23, 23, 0.05);
+  border: 1px solid rgba(21, 23, 23, 0.05);
+  border-radius: 2rem;
+  padding: 0.6rem 1.6rem;
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #151717;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.section h3 {
+  font-family: var(--font-primary);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 1.6rem;
+}
+
+.description {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #4a4d4d;
+  max-width: 76rem;
+}
+
+.infoBox {
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 4px solid var(--color-accent);
+  padding: 2rem 2.4rem;
+  border-radius: 0 1.6rem 1.6rem 0;
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  color: #151717;
+  line-height: 1.5;
+  margin-top: 2.4rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4.8rem;
+  }
+}
+
+.column h3 {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 2.4rem;
+  border-bottom: 1px solid rgba(21, 23, 23, 0.05);
+  padding-bottom: 1.2rem;
+}
+
+/* Step List layout styling */
+.stepList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stepList li {
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-start;
+}
+
+.stepNum {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background: #151717;
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepList p {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  color: #4a4d4d;
+  line-height: 1.5;
+  padding-top: 0.3rem;
+}
+
+/* Document List layout styling */
+.docList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.docList li {
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-start;
+}
+
+.bullet {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  margin-top: 0.8rem;
+  flex-shrink: 0;
+}
+
+.docList p {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  color: #4a4d4d;
+  line-height: 1.5;
+}
