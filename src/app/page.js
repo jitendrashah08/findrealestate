@@ -141,9 +141,13 @@ export default function Home() {
       function initScrollTrigger() {
         if (scrollTriggerTimeline) return;
 
-        // If user scrolls before entrance completes, immediately force-settle elements to finalized layout states
+        // Remove active scroll and touch listeners to prevent redundant executions
+        window.removeEventListener("scroll", scrollTriggerHandler);
+        window.removeEventListener("touchmove", scrollTriggerHandler);
+
+        // If user scrolls before entrance completes, kill the entrance timeline cleanly so ScrollTrigger begins fluidly from current active coordinates
         if (entranceTl.isActive() || !entranceTl.progress()) {
-          entranceTl.progress(1).kill();
+          entranceTl.kill();
           driftTweens.forEach(t => t.kill());
         }
 
@@ -159,10 +163,16 @@ export default function Home() {
           });
         });
 
+        // Pre-cache bounding client rects to completely prevent layout thrashing
+        const rectCache = new Map();
+        logoPaths.forEach((path) => {
+          rectCache.set(path, path.getBoundingClientRect());
+        });
+
         // Sort paths: First vertically by line (> 50px separation), then horizontally (left to right)
         logoPaths.sort((a, b) => {
-          const rectA = a.getBoundingClientRect();
-          const rectB = b.getBoundingClientRect();
+          const rectA = rectCache.get(a);
+          const rectB = rectCache.get(b);
           
           if (Math.abs(rectA.top - rectB.top) > 50) {
             return rectA.top - rectB.top;
