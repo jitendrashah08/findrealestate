@@ -1,0 +1,610 @@
+.main {
+  min-height: 100vh;
+  padding-top: 16rem;
+  padding-bottom: 10rem;
+  position: relative;
+  background-color: #ededed;
+  overflow: hidden;
+}
+
+.skyBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bgImage {
+  object-fit: cover;
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 4.8rem;
+  }
+}
+
+.subtitle {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #4a4d4d;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tabs Container navigation */
+.tabsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.tabBtn {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3rem;
+  padding: 1.2rem 2.8rem;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #4a4d4d;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.tabBtn:hover {
+  background: rgba(255, 255, 255, 0.85);
+  color: #151717;
+  transform: translateY(-2px);
+}
+
+.activeTab {
+  background: #151717 !important;
+  border-color: #151717 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 25px rgba(21, 23, 23, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+/* Content Panel Layout */
+.contentCard {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--border-radius);
+  padding: 4rem 2.4rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .contentCard {
+    padding: 6rem 4.8rem;
+  }
+}
+
+.panelDesc {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 4rem;
+  max-width: 720px;
+}
+
+/* Mortgage Calculator Styling */
+.calcLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4.8rem;
+}
+
+@media (min-width: 992px) {
+  .calcLayout {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 6.4rem;
+  }
+}
+
+.calcInputs h2,
+.marketPanel h2,
+.guidesPanel h2,
+.faqPanel h2 {
+  font-family: var(--font-primary);
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #151717;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.8rem;
+}
+
+.inputGroup {
+  margin-bottom: 3rem;
+}
+
+.inputHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.inputHeader label {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #151717;
+}
+
+.valueDisplay {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #151717;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.6rem 1.6rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(21, 23, 23, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+}
+
+.rangeInput {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(21, 23, 23, 0.08);
+  outline: none;
+}
+
+.rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: #151717;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.rangeInput::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.rangeLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  color: #888;
+  font-weight: 500;
+}
+
+/* Financing Toggle */
+.toggleGroup {
+  margin-bottom: 3.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.toggleGroup label {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #151717;
+}
+
+.toggleButtons {
+  display: flex;
+  background: rgba(21, 23, 23, 0.05);
+  padding: 0.4rem;
+  border-radius: 1.6rem;
+  gap: 0.4rem;
+  max-width: 320px;
+}
+
+.toggleButtons button {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 1rem 1.6rem;
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.activeToggle {
+  background: #ffffff !important;
+  color: #151717 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Calc Results Panel */
+.calcResults {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2.4rem;
+  padding: 3.6rem 3rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.resultsHeader {
+  text-align: center;
+  border-bottom: 1px solid rgba(21, 23, 23, 0.05);
+  padding-bottom: 2.4rem;
+}
+
+.resultsHeader h3 {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.monthlyValue {
+  font-family: var(--font-primary);
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #151717;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .monthlyValue {
+    font-size: 4.2rem;
+  }
+}
+
+.period {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.loanDisclaimer {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  color: #888;
+  margin-top: 1rem;
+}
+
+/* Cost Breakdown List */
+.breakdownList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.breakdownList h4 {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #666;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.breakdownRow {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  color: #4a4d4d;
+  line-height: 1.5;
+}
+
+.breakdownRow span:last-child {
+  font-weight: 600;
+  color: #151717;
+}
+
+.totalUpfrontFees {
+  border-top: 1px dashed rgba(21, 23, 23, 0.08);
+  padding-top: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.grandTotal {
+  border-top: 1px solid rgba(21, 23, 23, 0.1);
+  padding-top: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 700 !important;
+}
+
+.grandTotal span:last-child {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #151717;
+}
+
+.disclaimerBox {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #666;
+  background: rgba(255, 255, 255, 0.5);
+  border-left: 3px solid var(--color-accent);
+  padding: 1.6rem;
+  border-radius: 0 1.2rem 1.2rem 0;
+}
+
+/* Market Reports Panel */
+.marketPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 2rem;
+  border: 1px solid rgba(21, 23, 23, 0.05);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+  margin-bottom: 4.8rem;
+}
+
+.marketTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  color: #4a4d4d;
+  min-width: 720px;
+}
+
+.marketTable th {
+  background: rgba(21, 23, 23, 0.03);
+  padding: 2rem 2.4rem;
+  font-weight: 600;
+  color: #151717;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(21, 23, 23, 0.05);
+}
+
+.marketTable td {
+  padding: 2rem 2.4rem;
+  border-bottom: 1px solid rgba(21, 23, 23, 0.05);
+}
+
+.marketTable tr:last-child td {
+  border-bottom: none;
+}
+
+.communityName {
+  font-size: 1.6rem;
+  color: #151717;
+}
+
+.roiCell {
+  font-weight: 700;
+  color: #0b9b56; /* Rich emerald ROI */
+}
+
+.growthCell {
+  font-weight: 700;
+  color: #1b6af5; /* Accent blue Q-o-Q */
+}
+
+.marketSummaryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+}
+
+@media (min-width: 768px) {
+  .marketSummaryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.summaryCard {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2rem;
+  padding: 3rem 2.4rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.01);
+}
+
+.summaryCard h4 {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 1.2rem;
+}
+
+.summaryCard p {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Buying & Visa Guides */
+.guidesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.6rem;
+}
+
+@media (min-width: 992px) {
+  .guidesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.guideCard {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2.4rem;
+  padding: 3.6rem 2.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+  display: flex;
+  flex-direction: column;
+}
+
+.guideHeader {
+  border-bottom: 1px solid rgba(21, 23, 23, 0.05);
+  padding-bottom: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.guideCard h3 {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.guideSubtitle {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+}
+
+.guideDesc {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2.4rem;
+}
+
+.guidePoints {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.guidePoints li {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.guideBullet {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  margin-top: 0.7rem;
+  flex-shrink: 0;
+}
+
+.guidePoints p {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  color: #4a4d4d;
+  line-height: 1.5;
+}
+
+/* FAQ Panel */
+.faqPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.faqItem {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  padding: 3rem;
+}
+
+.faqItem h3 {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #151717;
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.faqQ {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: #151717;
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.faqItem p {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #4a4d4d;
+  padding-left: 3.8rem;
+}

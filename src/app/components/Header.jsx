@@ -154,10 +154,10 @@ export default function Header() {
               </button>
               {activeDropdown === "resources" && (
                 <div className={`${styles.dropdownSheet} glass`}>
-                  <Link href="/blog">Guides & Blog</Link>
-                  <Link href="/calculators">Mortgage Calculator</Link>
-                  <Link href="/market-report">NYC Market Reports</Link>
-                  <Link href="/faq">Homebuyer FAQs</Link>
+                  <Link href="/resources?tab=guides">Guides & Blog</Link>
+                  <Link href="/resources?tab=calculator">Mortgage & Fees Calculator</Link>
+                  <Link href="/resources?tab=market-report">Dubai Market Reports</Link>
+                  <Link href="/resources?tab=faq">Homebuyer FAQs</Link>
                 </div>
               )}
             </div>
@@ -229,9 +229,10 @@ export default function Header() {
 
             <div className={styles.burgerSectionTitle}>Resources</div>
             <div className={styles.burgerSublinks}>
-              <Link href="/blog">Guides & Blog</Link>
-              <Link href="/calculators">Mortgage Calculator</Link>
-              <Link href="/market-report">NYC Market Reports</Link>
+              <Link href="/resources?tab=guides">Guides & Blog</Link>
+              <Link href="/resources?tab=calculator">Mortgage Calculator</Link>
+              <Link href="/resources?tab=market-report">Dubai Market Reports</Link>
+              <Link href="/resources?tab=faq">Homebuyer FAQs</Link>
             </div>
           </nav>
           
